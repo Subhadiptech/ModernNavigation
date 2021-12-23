@@ -12,13 +12,27 @@
         tools:layout="@layout/fragment_first" >
         <action
             android:id="@+id/action_firstFragment_to_secondFragment"
-            app:destination="@id/secondFragment" />
+            app:destination="@id/secondFragment"
+            app:popEnterAnim="@anim/slide_out"
+            app:popExitAnim="@anim/slide_up"
+            app:enterAnim="@anim/slide_out"
+            app:exitAnim="@anim/slide_up"
+            />
     </fragment>
     <fragment
         android:id="@+id/secondFragment"
         android:name="com.ersubhadip.modernnavigation.SecondFragment"
         android:label="fragment_second"
-        tools:layout="@layout/fragment_second" />
+        tools:layout="@layout/fragment_second" >
+        <action
+            android:id="@+id/action_secondFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popEnterAnim="@anim/slide_out"
+            app:popExitAnim="@anim/slide_up"
+            app:enterAnim="@anim/slide_out"
+            app:exitAnim="@anim/slide_up"
+            />
+    </fragment>
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.ersubhadip.modernnavigation.MainFragment"
@@ -26,6 +40,11 @@
         tools:layout="@layout/fragment_main" >
         <action
             android:id="@+id/action_mainFragment_to_firstFragment"
-            app:destination="@id/firstFragment" />
+            app:destination="@id/firstFragment"
+            app:popEnterAnim="@anim/slide_out"
+            app:popExitAnim="@anim/slide_up"
+            app:enterAnim="@anim/slide_out"
+            app:exitAnim="@anim/slide_up"
+            />
     </fragment>
 </navigation>

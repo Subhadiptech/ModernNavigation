@@ -13,7 +13,7 @@ import androidx.navigation.Navigation
 
 class FirstFragment : Fragment() {
 
-   lateinit var navigator: NavController
+    lateinit var navigator: NavController
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,7 +26,15 @@ class FirstFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
         navigator = Navigation.findNavController(view)
+
+        view.findViewById<Button>(R.id.btnfirst).setOnClickListener {
+
+            navigator.navigate(R.id.action_firstFragment_to_secondFragment)
+
+        }
 
     }
 
